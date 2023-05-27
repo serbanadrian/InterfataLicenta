@@ -3,4 +3,4 @@
 <app-dropdown-forme (optionSelected)="onOption2Selected($event)"></app-dropdown-forme>
 <app-dropdown-culoare (optionSelected)="onOption3Selected($event)"></app-dropdown-culoare>
 <app-buton-generare (buttonClick)="generateURL()"></app-buton-generare>
-<app-buton-descarcare></app-buton-descarcare>
+<app-buton-descarcare [url]="pdfUrl"></app-buton-descarcare>

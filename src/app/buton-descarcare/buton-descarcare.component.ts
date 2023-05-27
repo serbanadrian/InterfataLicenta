@@ -1,5 +1,5 @@
-import { Component,Input  } from '@angular/core';
-
+import { Component,Input} from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-buton-descarcare',
   templateUrl: './buton-descarcare.component.html',
@@ -7,15 +7,21 @@ import { Component,Input  } from '@angular/core';
 })
 export class ButonDescarcareComponent {
   @Input() url: string = '';
-  // onClick() {
-  //   this.buttonClick.emit();
-  // }
+
+  constructor(private http: HttpClient) {}
+  
   downloadPDF() {
-    const link = document.createElement('a');
-    link.href = this.url;
-    link.download = 'generate.pdf'; // Specifică numele fișierului PDF descărcat
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    console.log('URL descărcare PDF:', this.url);
+
+    this.http.get(this.url, { responseType: 'blob' }).subscribe((response: Blob) => {
+      const blob = new Blob([response], { type: 'application/pdf' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'generate.pdf';
+      link.click();
+    });
+
+
   }
 }
