@@ -32,7 +32,7 @@ export class AppComponent {
 
   generateURL() {
     const url = `http://localhost:8080/pdf/generate?cifra=${this.option1}&figura=${this.option2}&culoare=${this.option3}`;
-    window.location.href = url;
+    window.open(this.pdfUrl, '_blank');
   }
   generareURL(){
     this.pdfUrl = `http://localhost:8080/pdf/generate?cifra=${this.option1}&figura=${this.option2}&culoare=${this.option3}`;
