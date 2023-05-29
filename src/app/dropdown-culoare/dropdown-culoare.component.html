@@ -1,4 +1,10 @@
+<div class="dropdown-pers">
+  <div class="custom-dropdown">
 <p>Alegeti culoarea dorita</p>
-<select [(ngModel)]="selectedOption" (change)="onOptionSelected()">
+  <div>
+<select class="dropdown-style " [(ngModel)]="selectedOption" (change)="onOptionSelected()">
   <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
 </select>
+</div>
+</div>
+</div>

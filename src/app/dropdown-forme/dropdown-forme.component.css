@@ -1,0 +1,36 @@
+.dropdown-pers{
+    font-size: 20px;
+}
+.custom-dropdown select {
+    font-size: 16px;
+    padding: 10px;
+    width: 317px;
+
+}
+.dropdown-style {
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-style select {
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: right 8px center;
+    background-repeat: no-repeat;
+  }
+  
+  .dropdown-style select:hover {
+
+    border-color: #2980b9;
+  }
+  
+  .dropdown-style select:focus {
+
+    outline: none;
+    border-color: #ff0000;
+  }

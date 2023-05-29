@@ -1,4 +1,10 @@
-<p>Alegeti lectia pe care doriti sa o invatati</p>
-<select [(ngModel)]="selectedOption" (change)="onOptionSelected()">
-  <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
-</select>
+<div class="dropdown-pers">
+  <div class="custom-dropdown">
+    <p>Alegeti lectia pe care doriti sa o invatati</p>
+    <div>
+    <select class="dropdown-style " [(ngModel)]="selectedOption" (change)="onOptionSelected()">
+      <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
+    </select>
+  </div>
+  </div>
+</div>

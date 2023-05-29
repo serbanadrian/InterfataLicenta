@@ -1,0 +1,18 @@
+.button-style{
+    width: 400px;
+  height: 100px;
+  background-color: #3498db;
+  color: #fff;
+  border: 2px solid #3498db;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.button-style:hover {
+  border-color: #2980b9;
+}
+.button-style:focus {
+  border-color: #ff0000;
+  border-style: dashed;
+}

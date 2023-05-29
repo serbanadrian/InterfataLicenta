@@ -13,6 +13,7 @@ import { DropdownCuloareComponent } from './dropdown-culoare/dropdown-culoare.co
 import { ButonGenerareComponent } from './buton-generare/buton-generare.component';
 import { ButonDescarcareComponent } from './buton-descarcare/buton-descarcare.component';
 import { ParinteComponent } from './parinte/parinte.component';
+import { TitleComponent } from './title/title.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ParinteComponent } from './parinte/parinte.component';
     DropdownCuloareComponent,
     ButonGenerareComponent,
     ButonDescarcareComponent,
-    ParinteComponent
+    ParinteComponent,
+    TitleComponent
   ],
   imports: [
     BrowserModule,

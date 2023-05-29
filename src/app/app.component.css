@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.container app-dropdown,
+.container app-dropdown-forme,
+.container app-dropdown-culoare {
+  margin-right: 150px;
+  margin-top: 50px;
+}
+
+.containerButoane {
+    display: flex;
+    justify-content: column;
+    align-items: column;
+}
+.containerButoane app-buton-generare{
+    margin-left: 200px;
+    margin-top: 200px;
+
+}
+.containerButoane app-buton-descarcare
+{
+    margin-left: 300px;
+    margin-top: 200px;
+}
