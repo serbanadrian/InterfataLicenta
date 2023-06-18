@@ -14,6 +14,17 @@ import { ButonGenerareComponent } from './buton-generare/buton-generare.componen
 import { ButonDescarcareComponent } from './buton-descarcare/buton-descarcare.component';
 import { ParinteComponent } from './parinte/parinte.component';
 import { TitleComponent } from './title/title.component';
+import { TextboxComponent } from './textbox/textbox.component';
+import { AdaugaComponent } from './adauga/adauga.component';
+
+import { environment } from 'src/environments/environment';
+import { ListaPersComponent } from './lista-pers/lista-pers.component';
+
+//import { FirestoreModule } from '@angular/fire/firestore';
+// import { AngularFireModule } from '@angular/fire/compat';
+// import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+//import { FirebaseService } from './firebase.service';
+//import { FirebaseService } from './firebase.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +36,11 @@ import { TitleComponent } from './title/title.component';
     ButonGenerareComponent,
     ButonDescarcareComponent,
     ParinteComponent,
-    TitleComponent
+    TitleComponent,
+    TextboxComponent,
+    AdaugaComponent,
+    ListaPersComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -33,7 +48,9 @@ import { TitleComponent } from './title/title.component';
     FormsModule,
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    //AngularFireModule.initializeApp(environment.firebaseConfig),
+    //AngularFirestoreModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

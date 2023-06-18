@@ -10,7 +10,6 @@ export class ButonGenerareComponent {
   pdfUrl: string = '';
 
   generateURLAndRedirect() {
-    // Emite evenimentul buttonClick către componenta părinte
     this.buttonClick.emit();
   }
 }
