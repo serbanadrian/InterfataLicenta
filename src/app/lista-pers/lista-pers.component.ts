@@ -1,10 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter  } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, interval } from 'rxjs';
-//import { switchMap } from 'rxjs/operators';
 import { map, tap, switchMap } from 'rxjs/operators';
-//import { AngularFireDatabase } from '@angular/fire/database';
-//import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-lista-pers',
@@ -13,8 +11,9 @@ import { map, tap, switchMap } from 'rxjs/operators';
 })
 export class ListaPersComponent implements OnInit {
   persons!: any[];
+  personName: string = '';
+  @Output() personClick = new EventEmitter<string>();
   constructor(private http: HttpClient) {}
-//  persons$: Observable<any[]>;
 ngOnInit() {
   this.getPersons();
   interval(200)
@@ -36,5 +35,10 @@ getPersons(): Observable<any> {
     })
   );
 }
-
+selectPerson(personName: string) {
+  this.personClick.emit(personName);
+}
+updatePersonName(name: string) {
+  this.personClick.emit(name);
+}
 }

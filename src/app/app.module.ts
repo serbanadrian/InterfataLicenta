@@ -19,6 +19,7 @@ import { AdaugaComponent } from './adauga/adauga.component';
 
 import { environment } from 'src/environments/environment';
 import { ListaPersComponent } from './lista-pers/lista-pers.component';
+import { StergeComponent } from './sterge/sterge.component';
 
 //import { FirestoreModule } from '@angular/fire/firestore';
 // import { AngularFireModule } from '@angular/fire/compat';
@@ -40,6 +41,7 @@ import { ListaPersComponent } from './lista-pers/lista-pers.component';
     TextboxComponent,
     AdaugaComponent,
     ListaPersComponent,
+    StergeComponent,
     
   ],
   imports: [

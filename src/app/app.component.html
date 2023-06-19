@@ -1,7 +1,8 @@
 <app-title></app-title>
 <app-textbox (nameChange)="personName = $event"></app-textbox>
 <app-adauga (buttonClick)="addName()"></app-adauga>
-<app-lista-pers></app-lista-pers>
+<app-sterge (buttonClickSterge)="deletePerson()"></app-sterge>
+<app-lista-pers (personClick)="updatePersonName($event)"></app-lista-pers>
 <div class="container clearfix">
     <app-dropdown (optionSelected)="onOption1Selected($event)"></app-dropdown>
     <app-dropdown-forme (optionSelected)="onOption2Selected($event)"></app-dropdown-forme>

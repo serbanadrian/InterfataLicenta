@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   title = 'Licenta';
   personName: string = '';
+  personId: string = '';
   pdfUrl: string = '';
   option1: string ='';
   option2: string ='';
@@ -41,6 +42,36 @@ constructor(private http: HttpClient){}
     });
     this.generareURL();
     this.personName = '';
+  }
+
+  deletePerson() {
+    const url = 'https://licentadate-default-rtdb.firebaseio.com/Nume.json';
+    this.http.get<any>(url).subscribe((data) => {
+      const persons = Object.values(data); 
+      const person = persons.find((p: any) => p.Nume === this.personName);
+      if (person) {
+        const personId = Object.keys(data).find((key) => data[key].Nume === this.personName); 
+        if (personId) {
+          const deleteUrl = `https://licentadate-default-rtdb.firebaseio.com/Nume/${personId}.json`;
+          this.http.delete(deleteUrl).subscribe(
+            (res) => {
+              console.log('Persoana a fost ștearsă');
+            },
+            (error) => {
+              console.log(error);
+            }
+          );
+        } else {
+          console.log('Nu s-a găsit ID-ul persoanei');
+        }
+      } else {
+        console.log('Nu s-a găsit nicio persoană cu acest nume');
+      }
+    });
+  }
+  updatePersonName(name: string) {
+    this.personName = name;
+    this.generareURL();
   }
 
   generateURL() {
