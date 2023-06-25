@@ -1,18 +1,18 @@
 .button-style{
   width: 400px;
   height: 100px;
-  background-color: #3498db;
+  background-color: #368c00fe;
   color: #fff;
-  border: 2px solid #3498db;
+  border: 2px solid #368c00fe;
   font-size: 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 .button-style:hover {
-  border-color: #2980b9;
+  border-color: #368c00fe;
 }
 .button-style:focus {
-  border-color: #ff0000;
+  border-color: #368c00fe;
   border-style: dashed;
 }

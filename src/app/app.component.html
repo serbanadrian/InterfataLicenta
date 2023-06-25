@@ -1,12 +1,22 @@
 <app-title></app-title>
+<div class="containerMare">
+<div class="containerStanga">
+    <div class="containerStanga1">
 <app-textbox (nameChange)="personName = $event"></app-textbox>
+<div class="butoaneStanga1">
 <app-adauga (buttonClick)="addName()"></app-adauga>
 <app-sterge (buttonClickSterge)="deletePerson()"></app-sterge>
+</div>
+</div>
+<div class="containerStanga2">
 <app-lista-pers (personClick)="updatePersonName($event)"></app-lista-pers>
+</div>
+</div>
 <div class="container clearfix">
     <app-dropdown (optionSelected)="onOption1Selected($event)"></app-dropdown>
     <app-dropdown-forme (optionSelected)="onOption2Selected($event)"></app-dropdown-forme>
     <app-dropdown-culoare (optionSelected)="onOption3Selected($event)"></app-dropdown-culoare>
+</div>
 </div>
 <div class="containerButoane">
 <app-buton-generare (buttonClick)="generateURL()"></app-buton-generare>

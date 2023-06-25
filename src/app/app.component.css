@@ -1,8 +1,21 @@
-.container {
-    display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+.containerMare {
+  display: flex;
+  justify-content: space-between;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-self: flex-start;
+  margin-top: 0;
+  margin-left: calc(50% - (200px / 2)); 
+  margin-right: calc(50% - (200px / 2));
+}
+.container > * {
+  margin-bottom: 10px;
+}
+
 .container app-dropdown,
 .container app-dropdown-forme,
 .container app-dropdown-culoare {
@@ -24,4 +37,21 @@
 {
     margin-left: 300px;
     margin-top: 200px;
+}
+.containerStanga {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2cm;
+  margin-left: 6cm;
+  
+}
+.containerStanga1,
+.containerStanga2 {
+  width: 100%;
+}
+.butoaneStanga1 {
+  margin-left: 2cm;
+}
+.container {
+  margin-left: 6cm;
 }
